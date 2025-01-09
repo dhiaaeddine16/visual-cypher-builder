@@ -161,7 +161,7 @@ export function resetBuilderQuery(oldItems: any[][], oldElements: {}) {
  * @property {Object} newElements - The updated object of element definitions.
  */
 
-export function updateBuilderNodesRelationships(oldItems: any[][], oldElements: {}, schema: { nodes: {}; relationships: {}; }, variables: []) {
+export function updateBuilderNodesRelationships(oldItems: any[][], oldElements: {}, schema: { nodes: {}; relationships: {}; }, variables: any[]) {
 
     let newElements = { ...oldElements };
     const newItems = [...oldItems];
@@ -182,7 +182,7 @@ export function updateBuilderNodesRelationships(oldItems: any[][], oldElements: 
     const nodeElements = {};
     const varName = assignUniqueVariableName(variables, 'n');
     insertNodeDefinition(nodeElements, varName, '');
-    Object.keys(schema.nodes).forEach(nodeLabel => {
+    schema?.nodes && Object.keys(schema.nodes).forEach(nodeLabel => {
         if (nodeLabel) {
             const varName = assignUniqueVariableName(variables, nodeLabel[0].toLowerCase())
             insertNodeDefinition(nodeElements, varName, nodeLabel);
@@ -195,7 +195,7 @@ export function updateBuilderNodesRelationships(oldItems: any[][], oldElements: 
     const relElements = {};
     const relVarName = assignUniqueVariableName(variables, 'r');
     insertRelationshipDefinition(relElements, relVarName, '');
-    Object.keys(schema.relationships).forEach(relType => {
+    schema?.relationships && Object.keys(schema.relationships).forEach(relType => {
         if (relType) {
             const varName = assignUniqueVariableName(variables, relType[0].toLowerCase())
             insertRelationshipDefinition(relElements, varName, relType);

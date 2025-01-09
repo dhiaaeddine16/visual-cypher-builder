@@ -13,7 +13,7 @@ import { insertClauseDefinition, insertNodeDefinition, insertVariableDefinition,
  * @param {any} schema The schema of the graph.
  * @returns {any[]} An array of query templates.
  */
-export function buildTemplateQueries(schema) {
+export function buildTemplateQueries(schema, indexes) {
     const templates = [];
     schema?.nodes && Object.keys(schema.nodes).forEach((label: any) => {
         // Simple retrieval of nodes
