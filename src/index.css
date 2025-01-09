@@ -1,0 +1,30 @@
+/* Injecting some fonts */
+@import url('https://fonts.googleapis.com/css?family=Fira+Code');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** TODO: hacking in some colors because I can't get needle to override select colors, somehow. */
+.red-text .ndl-placeholder, .red-text input, .red-text .ndl-select-option {
+  color: #cb4b16 !important;
+}
+
+.blue-text .ndl-placeholder, .blue-text input, .blue-text .ndl-select-option {
+  color: #268bd2 !important;
+}
+
+.orange-text .ndl-placeholder, .orange-text input, .orange-text .ndl-select-option {
+  color: #b58900 !important;
+}
+
+.grey-text .ndl-placeholder, .grey-text input, .grey-text .ndl-select-option {
+  color: #586e75 !important;
+}
+
+.green-text .ndl-placeholder, .green-text input, .green-text .ndl-select-option {
+  color: #2aa198 !important;
+}
+
+
+
