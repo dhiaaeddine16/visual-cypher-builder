@@ -22,6 +22,7 @@
     "antlr4": "^4.13.2",
     "neo4j-driver": "^5.27.0",
     "postcss": "^8.4.47",
+    "nanoid": "^3.3.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.14"
@@ -34,6 +35,8 @@
     "eslint": "^9.11.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
+    "@eslint/plugin-kit": "^0.2.3",
+    "cross-spawn": "^7.0.5",
     "globals": "^15.9.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
